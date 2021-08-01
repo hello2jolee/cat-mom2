@@ -8,6 +8,9 @@ import styles from "./App.module.scss";
 // -- assets
 import Loading from "assets/IconSvg/Loading";
 
+// -- pages
+import Navigation from "pages/Navigation";
+
 const cx = classNames.bind(styles);
 
 function App() {
@@ -40,11 +43,14 @@ function App() {
   return (
     <div className={cx("article", !init && "type-full")}>
       {init ? (
-        <AppRouter
-          refreshUser={refreshUser}
-          isLoggedIn={Boolean(userObj)}
-          userObj={userObj}
-        />
+        <>
+        <Navigation />
+          <AppRouter
+            refreshUser={refreshUser}
+            isLoggedIn={Boolean(userObj)}
+            userObj={userObj}
+          />
+        </>
       ) : (
         <div className={cx("loading-area")}>
           <Loading width={350} height={350} />

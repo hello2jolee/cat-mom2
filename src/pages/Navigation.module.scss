@@ -1,0 +1,38 @@
+.article {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #c8c8c8;
+    background-color: #fff;
+    button {
+        border: 0 none;
+        background-color: transparent;
+    }
+    a {
+        color: #222;
+        text-decoration: none;
+    }
+    ul {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        padding: 5px 0;
+        margin: 0;
+        border: 1px solid #c8c8c8;
+        background-color: #fff;
+        li {
+            width: 250px;
+            padding: 5px 0 !important;
+            text-align: center;
+            list-style-type: none;
+        }
+    }
+    .nav-top {
+        margin-left: auto;
+        button {
+            padding: 10px;
+        }
+        span {
+            vertical-align: top;
+        }
+    }
+}
